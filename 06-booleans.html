@@ -6,31 +6,39 @@
   </head>
   <body>
     <script>
-      console.log(typeof true)
-      false
 
-      console.log(3 > 5 - 5); // comparison operator have a lower priority than math operaters.
+      // console.log(typeof true)
+      // false
 
-      console.log(5 === '5.00') // False; does not convert number and string into the same thing.
-      console.log(5 == '5.00') // True: two equal signs make the number and string into the same value. So instead just use the triple ===.
+      // console.log(3 > 5 - 5); // comparison operator have a lower priority than math operaters.
 
-      if(false) {
-        console.log('hello');
+      // console.log(5 === '5.00') // False; does not convert number and string into the same thing.
+      // console.log(5 == '5.00') // True: two equal signs make the number and string into the same value. So instead just use the triple ===.
 
-      } else {
-        console.log('else');
-      } 
+      // if(false) {
+      //   console.log('hello');
+
+      // } else {
+      //   console.log('else');
+      // } 
       
-        const age = 15;
+      //   const age = 15;
 
-      if (age >= 16) {
-        console.log('You can fly this spacecraft');
-      } else if (age >= 14) {
-        console.log('You are not a Jedi yet, you are a padawon!');
-      } else {
-        console.log('You are too young to be trained in the force');
-      }
+      // if (age >= 16) {
+      //   console.log('You can fly this spacecraft');
+      // } else if (age >= 14) {
+      //   console.log('You are not a Jedi yet, you are a padawon!');
+      // } else {
+      //   console.log('You are too young to be trained in the force');
+      // }
 
+      console.log(true && false);
+      console.log(0.2 > 0 && 0.2 < 1/3);
+
+      console.log(true || false) // || the two vertical lines is the "or" operator. So this is saying, if the first or the second conditions are true then spit out the whole thing as true
+
+      console.log(!true); // this is the "not operator". This takes the boolean vaule and flips it.
+      
     </script>
   </body>
 </html>
