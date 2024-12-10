@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+  <title> Function practice</title>
+</head>
+<body>
+  <script>
+    function conversionLength (length, unit) {
+      if (unit === 'km') {
+        length = length * 621 / 1000;
+        console.log(`${length}: miles`)
+      } else if (unit === 'miles') {
+        length = length * 1609 / 1000;
+        console.log(`${length}: km`)
+      }
+    }
+    conversionLength (2500, 'miles');
+  </script>
+  
+</body>
