@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Lesson 8 practice exercises</title>
+    </head>
+    <body>
+      <script>
+        // ===============8a - 8c ====================
+        const basketball = {
+          name: 'basketball',
+          price: 2095,
+          deliveryTime: '3 days'
+        };
+        basketball.price += 500; // increasing the price of basketball by 5 dollars
+        console.log(basketball);
+        // ------------------------ 8d -----------------------------
+        const airJordans = {
+          name: 'Air Jordans',
+          price: 120000,
+          deliveryTime: '2 days'
+        };
+        console.log(airJordans);
+
+        function returnCheaperPrice (product1, product2) {
+          if(product1 < product2) {
+            return product1;
+          } else if (product2 < product1) {
+            return product2;
+          } else {
+            console.log('Fix the code');
+          }
+
+         
+
+        };
+        console.log(returnCheaperPrice(basketball.price, airJordans.price));
+       
+      </script>
+    </body>
+  </html>

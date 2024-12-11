@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+    const product = {
+      name: 'socks',
+      price: 1090  
+     };
+     console.log(typeof product);
+     console.log(product);
+     console.log(product.name);
+     console.log(product.price);
+
+
+     product.name = 'cotton socks';
+
+     console.log(product);
+
+     product.newProperty = 3 > 5;
+
+     console.log(product);
+
+     delete product.newProperty;
+
+     console.log(product);
+     console.log (product.name);
+     
+
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating: {
+            stars: 4.5,
+            count: 87 
+        }, // nested object; or an object inside an object.
+        fun: function function1() {
+          console.log('function inside object');
+        } // saving function inside 
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']); 
+      console.log(product2['delivery-time']);
+
+      console.log(product2.rating.count);
+      product2.fun();
+      console.log(typeof console.log); // method. Built in objects.
+
+      console.log(JSON.stringify(product2)); //stringify is a method of the JSON object, so its a function that is saved inside the Jason object. You can call it with brackets.
+      
+      
+      
+     
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString));
+      */
+
+          console.log('hello'.length);
+          console.log('hello'.toUpperCase());
+
+
+      const object1 = {
+        message: 'Hello There'
+      };
+      const object2 = object1;
+
+      object1.message = 'Good job'  // so you can change the values or properties inside a const object.
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: 'Good job'
+      };
+      console.log(object3.message === object1.message);
+      const object4 = {
+        message: 'Good job',
+        price: 799
+      };
+
+      // const message = object4.message; ↓ Does the same as below ↓
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      const object5 = {
+        // message: message
+        message, // this does the same this as abobe ↑
+        // method: function function1() {
+        //   console.log('method');
+        // } ↓ shortcut for ↑
+        method() {
+          console.log('method')
+        }
+      };
+      console.log(object5);
+      object5.method();
+    
+    </script>
+  </body>
+</html>
