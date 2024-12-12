@@ -21,19 +21,56 @@
         };
         console.log(airJordans);
 
-        function returnCheaperPrice (product1, product2) {
-          if(product1 < product2) {
+        const basketball2 = {
+          name: 'basketball',
+          price: 2595,
+          deliveryTime: '3 days'
+        };
+        
+       
+       let cheaperProduct = {};
+        function returnCheaperProduct (product1, product2) {
+          if(product1.price < product2.price) {
             return product1;
-          } else if (product2 < product1) {
+            
+          } else if (product2.price < product1.price) {
             return product2;
           } else {
-            console.log('Fix the code');
+            console.log('The products are the same price');
+            return null;
           }
 
-         
+        }
+          cheaperProduct = returnCheaperProduct(basketball, airJordans);
+          
+        
+
+        console.log(cheaperProduct);
+        console.log(`The ${cheaperProduct.name} is cheaper with the cost of ${cheaperProduct.price}`);
+        
+        
+       
+
+        
+
+        // ------------------------------8e-------------------------------------
+
+        function isSameProduct(product1, product2){
+          if (product1.price === product2.price && product1.name === product2.name){
+            console.log('These products are the same.');
+          } else {
+            console.log('These products are different')
+          }
+
+          
 
         };
-        console.log(returnCheaperPrice(basketball.price, airJordans.price));
+        isSameProduct(basketball, basketball2);
+        isSameProduct(basketball, airJordans);
+
+        let myString = 'Hello There'
+        console.log(myString.toLowerCase());
+        console.log('General Kenobi, you are a BOLD ONE!'.toLowerCase());
        
       </script>
     </body>
