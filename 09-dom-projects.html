@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>DOM Projects</title> 
-  </head>
+  </head>asdf
   <body>
 
     <p> YouTube Subscribe Button</p>
@@ -10,10 +10,18 @@
     
     <p>Amazon Shipping Calculator</p>
     <input placeholder="Cost of order" class = "js-cost-input" onkeydown="handleCostKeyDown(event);"> 
+
     <button onclick ="calculateTotal();">Calculate</button>
     <p class = "js-total-cost"></p>
 
     <script>
+      String(25); // built in string function. Converts 25 into a string.
+      console.log('25' - 5); // if a string only contains numbers, it will convert it into a number. This is another example of type coercison, but this is not recommended.
+
+      window.document
+      window.console.log('Window');
+      window.alert('Hello There'); // all of these things are automatically in. You don't have to type window but behind the scenes window is there.
+
       function handleCostKeyDown(event) {
           if (event.key ==='Enter') {
             calculateTotal();
@@ -45,7 +53,7 @@
       }
 
       
-
+			
     </script>
   </body>
 </html>

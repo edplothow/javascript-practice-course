@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  <title>09A Practice</title>
+</head>
+
+  <body>
+    <button class="nine-a-button">9a</button>
+    <button class="nine-b-button" onclick="nineBButton()">9b</button>
+    <script>
+      
+      let nineB = document.querySelector('.nine-b-button').innerHTML;
+      console.log(nineB);
+
+      function nineBButton () {
+       if (nineB === '9b'){
+          nineB = 'Chicken Nuggets';
+          document.querySelector('.nine-b-button').innerHTML = 'Chicken nuggets';
+          console.log(document.querySelector('.nine-b-button').innerHTML);
+
+        } else {
+          document.querySelector('.nine-b-button').innerHTML = '9b';
+          console.log('else');
+          nineB = '9b';
+        }
+      };
+      console.log(document.querySelector('.nine-b-button').innerHTML);
+    </script>
+  </body>

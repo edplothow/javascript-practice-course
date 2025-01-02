@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice</title> 
+  </head>
+  <body>
+    <p>Hello There</p>
+    <input placeholder="Hello There" onkeydown="bilboBaggins();" class = "js-input-event">
+    <p class = "js-show-event"></p>
+
+    <script>
+       function bilboBaggins(){
+       const gatherEvent = event.key;
+       console.log(gatherEvent);
+       document.querySelector('.js-show-event').innerHTML = gatherEvent; 
+
+       
+        
+     }
+      
+    </script>
+  </body>
+</html>
