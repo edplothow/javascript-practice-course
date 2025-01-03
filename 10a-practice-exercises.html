@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<head>
+  <title>10a-c Practice Exercises</title>
+  <link>
+  <style>
+    .style-add-to-cart {
+      background-color: rgb(255, 216, 20);
+      border-radius: 100px;
+      font-size: 16px;
+      color: black;
+      padding: 7px 40px;
+      border: none;
+      cursor: pointer;
+    }
+    .style-uber-request-now {
+      font-size: 14px;
+      background-color: black;
+      color: white;
+      padding: 6px 11px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .style-schedule-for-later {
+      font-size: 14px;
+      background-color: rbg(230, 230, 230);
+      color: black;
+      font-weight: bold;
+      border: none;
+      padding: 8px 11px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .style-gaming-white {
+      font-size: 15px;
+      color: black;
+      background-color: white;
+      padding: 7px 11px;
+
+    }
+    .style-gaming-black {
+      font-size: 15px;
+      background-color: black;
+      color: white;
+      padding: 9px 23px;
+    }
+    
+  </style>
+</head>
+<body>
+  <button class="style-add-to-cart">Add to Cart</button>
+  <button class="style-uber-request-now">Request Now</button>
+  <button class="style-schedule-for-later">Schedule For Later</button>
+  <button class="style-gaming-black js-game-button" onclick="gameButtonChange()">Gaming</button>
+
+  <button class="js-button">Test</button>
+  <script>
+    const button = document.querySelector('.js-button');
+    console.log(button.classList.contains('js-button'));
+
+    function gameButtonChange(){
+      const gamingButtonClass = document.querySelector('.js-game-button');
+      if (!gamingButtonClass.classList.contains('style-gaming-white')) {
+        console.log('white');
+        gamingButtonClass.classList.add('style-gaming-white');
+        gamingButtonClass.classList.remove('style-gaming-black');
+      } else {
+        gamingButtonClass.classList.remove('style-gaming-white');
+        gamingButtonClass.classList.add('style-gaming-black');
+        console.log('black'); 
+      } 
+    }
+
+  </script>
+</body>
