@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+  <title>09D Practice Exercise</title>
+</head>
+<body>
+  <input class="js-input-name" placeholder="Name" onkeydown="event.key === 'Enter' && displayName()">
+  <button onclick="displayName()">Submit</button>
+  <p class="js-display-name"></p>
+
+  <script>
+    function displayName () {
+      const name = document.querySelector('.js-input-name').value;
+      console.log(name);
+      document.querySelector('.js-display-name').innerHTML = name;
+    }
+  </script>
+</body>

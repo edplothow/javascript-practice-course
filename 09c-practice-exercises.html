@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>9c Pracice Exercise</title>
+</head>
+<body>
+  <button onclick="runCoinFlip('Heads')">Heads</button>
+  <button onclick="runCoinFlip('Tails')">Tails</button>
+  <p class="display-coin-flip"></p>
+  <script>
+    function runCoinFlip (coinFlip) {
+      document.querySelector('.display-coin-flip').innerHTML = `You chose: ${coinFlip}`;
+
+      // if (coinFlip === 'Heads') {
+      //   document.querySelector('.display-coin-flip').innerHTML = `You chose: ${coinFlip}`;
+      // } else if (coinFlip === 'Tails') {
+      //   document.querySelector('.display-coin-flip').innerHTML = `You chose: ${coinFlip}`;
+      // } else {
+      //   console.log('General Kenobi, you have made an error...');
+      // }
+    }
+
+  </script>
+</body>
