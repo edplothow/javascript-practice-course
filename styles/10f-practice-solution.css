@@ -1,4 +1,4 @@
-.toggle-button {
+.grey-button {
   background-color: rgb(230, 230, 230);
   border: none;
   padding: 10px 15px;
@@ -8,8 +8,9 @@
   cursor: pointer;
 }
 
-.is-toggled {
+.black-button {
   background-color: black;
   color: white;
   cursor: pointer;
+  padding: 10px 15px;
 }
