@@ -1,0 +1,59 @@
+.style-add-to-cart {
+  background-color: rgb(255, 216, 20);
+  border-radius: 100px;
+  font-size: 16px;
+  color: black;
+  padding: 7px 40px;
+  border: none;
+  cursor: pointer;
+}
+.style-uber-request-now {
+  font-size: 14px;
+  background-color: black;
+  color: white;
+  padding: 6px 11px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.style-schedule-for-later {
+  font-size: 14px;
+  background-color: rbg(230, 230, 230);
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 8px 11px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.style-gaming-white {
+  font-size: 15px;
+  color: black;
+  background-color: white;
+  padding: 7px 11px;
+  margin-top: 40px;
+
+}
+.style-gaming-black {
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  padding: 7px 11px;
+  margin-top: 40px;
+}
+
+.style-music-white {
+  font-size: 15px;
+  color: black;
+  background-color: white;
+  padding: 7px 11px;
+  margin-top: 40px;
+
+}
+.style-music-black {
+  font-size: 15px;
+  background-color: black;
+  color: white;
+  padding: 7px 11px;
+  margin-top: 40px;
+}
+
