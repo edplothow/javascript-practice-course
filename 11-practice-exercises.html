@@ -176,11 +176,64 @@
       // }
 
       // 11 N Practice //
+      //   let fruitArray = ['Apple', 'Pair', 'Apple', 'Blackberry'];
+      //   countWords(fruitArray);
+      // function countWords(insertedArray) {
+      //   let wordCountObject = {}
+      //   for (let i = 0; i < words.length; i++) {
+      //     let word = insertedArray[i];
+      //     console.log(word);
+      //     wordCountObject.bilbo = bilbo;
+      //   }
 
-      function countWords(words) {
-        
+      //   console.log(wordCountObject);
+
+      // }
+//       let fruitArray = ['Apple', 'Pair', 'Apple', 'Blackberry'];
+// countWords(fruitArray);
+
+// function countWords(words) {
+//   let wordCountObject = {};
+
+//   for (let i = 0; i < words.length; i++) {
+//     let word = words[i]; 
+//     if (wordCountObject[word]) {
+//       wordCountObject[word] = wordCountObject[word] + 1; 
+//     } else {
+//       wordCountObject[word] = 1; 
+//     }
+//   }
+
+//   console.log(wordCountObject); 
+// }
+
+      // bilbosObject = {}
+      // bilbosObject['Hello There'] = 23;
+      // bilbosObject['General Kenobi, you are a bold one.'] = 1;
+      // console.log(bilbosObject);
+
+      // 11 N Retry //
+
+
+      let starWarsArray = ['Boba Fett', 'Darth Vader', 'Boba Fett', 'Boba Fett', 'Anakin Skywalker'];
+      let lotrArray = ['Gandalf', 'Frodo', 'Sam', 'Sam', 'Sam', 'Frodo', 'Gimli'
+      ];
+
+      countNames(starWarsArray);
+      countNames(lotrArray);
+
+      function countNames (insertedArray) {
+        let objectNameCount = {};
+        for (let i = 0; i < insertedArray.length; i++){
+          if (!objectNameCount[insertedArray[i]]) {
+            objectNameCount[insertedArray[i]] = 1;
+          } else {
+            console.log('Bear Me Up');
+            objectNameCount[insertedArray[i]]++;
+          }
       }
-
+      console.log(objectNameCount);
+    }
 
     </script>
   </body>
