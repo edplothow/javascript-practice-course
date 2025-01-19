@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>11 Practice Exerciese Part 2</title>  
+</head>
+<body>
+  <script>
+    // 11o and 11p Practice //
+
+    // const lotr = ['Gimli', 'Gandalf', 'Glorfindel'];
+    // const starWars = ['Luke', 'Han', 'search', 'Darth Vader', 'search'];
+
+    // findSearch(lotr);
+    // findSearch(starWars);
+
+    // function findSearch(insertedArray) {
+    //   let searchPosition = -1;
+    //   for (let i = 0; i < insertedArray.length; i++){
+    //     if(insertedArray[i] === 'search'){
+    //       searchPosition = i;
+    //       break;
+    //     }
+    //   } 
+    //   console.log(searchPosition);
+    // }
+
+    //11q Practice //
+
+     const lotr = ['Gimli', 'Gandalf', 'Glorfindel'];
+     const starWars = ['Luke', 'Han', 'search', 'Darth Vader', 'search']
+
+     findIndex(lotr, 'Gandalf');
+     findIndex(starWars, 'Darth Vader');
+     findIndex(lotr, 'Frodo');
+
+    function findIndex(array, word) {
+      let index = -1;
+      for (let i = 0; i < array.length; i++){
+        if(array[i] === word) {
+          index = i;
+          break;
+        }
+      }
+      console.log(index);
+    }
+  </script>
+</body>
