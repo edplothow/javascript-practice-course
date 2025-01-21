@@ -25,22 +25,76 @@
 
     //11q Practice //
 
-     const lotr = ['Gimli', 'Gandalf', 'Glorfindel'];
-     const starWars = ['Luke', 'Han', 'search', 'Darth Vader', 'search']
+    //  const lotr = ['Gimli', 'Gandalf', 'Glorfindel'];
+    //  const starWars = ['Luke', 'Han', 'search', 'Darth Vader', 'search']
 
-     findIndex(lotr, 'Gandalf');
-     findIndex(starWars, 'Darth Vader');
-     findIndex(lotr, 'Frodo');
+    //  findIndex(lotr, 'Gandalf');
+    //  findIndex(starWars, 'Darth Vader');
+    //  findIndex(lotr, 'Frodo');
 
-    function findIndex(array, word) {
-      let index = -1;
-      for (let i = 0; i < array.length; i++){
-        if(array[i] === word) {
-          index = i;
-          break;
+    // function findIndex(array, word) {
+    //   let index = -1;
+    //   for (let i = 0; i < array.length; i++){
+    //     if(array[i] === word) {
+    //       index = i;
+    //       break;
+    //     }
+    //   }
+    //   console.log(index);
+    // }
+
+    // 11 R and 11 S Practice //
+    // const starWars = ['Luke', 'egg', 'egg', 'Han', 'egg', 'search', 'Darth Vader', 'egg', 'search'];
+    // const lotr = ['egg', 'egg', 'egg', 'Gimli', 'Gandalf', 'Glorfindel'];
+
+    // removeEgg(starWars);
+    // removeEgg(lotr);
+    
+    // function removeEgg(foodArray) {
+    //   let eggLessArray = [];  
+    //   let eggCount = 0;
+    //   for (let i = 0; i < foodArray.length; i++) {
+        
+    //     if (foodArray[i] === 'egg' && eggCount < 2) {
+    //       eggCount++;
+    //       continue;
+          
+    //     }
+    //     let index = foodArray[i];
+    //       eggLessArray.push(index);
+          
+    //   }
+    //   console.log(eggLessArray);
+    // }
+ 
+    // 11 U Practice // 
+    const starWars = ['Luke', 'egg', 'egg', 'Han', 'egg', 'search', 'Darth Vader', 'egg', 'search'];
+    const lotr = ['egg', 'egg', 'egg', 'Gimli', 'Gandalf', 'Glorfindel', 'egg'];
+
+    
+    removeEgg(starWars);
+    removeEgg(lotr);
+
+   
+    
+    function removeEgg(foodArray) {
+      let eggLessArray = foodArray.reverse();  
+      let eggCount = 0;
+      for (let i = 0; i < foodArray.length; i++) {
+        
+        if (foodArray[i] === 'egg' && eggCount < 2) {
+          eggCount++;
+          eggLessArray.splice(i, 1);
+          
+                  
         }
+        
+          
       }
-      console.log(index);
+      console.log(eggLessArray.reverse());
+      
     }
+
+
   </script>
 </body>
