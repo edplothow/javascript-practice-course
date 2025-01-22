@@ -242,29 +242,51 @@
       // console.log(Math.floor(12.3));
       // console.log(typeof(Math.floor()))
 
-      function getRandomInt (min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
+      // function getRandomInt (min, max) {
+      //   min = Math.ceil(min);
+      //   max = Math.floor(max);
+      //   return Math.floor(Math.random() * (max - min + 1)) + min;
+      // }
 
-      // console.log(getRandomInt (1, 20));
+      // // console.log(getRandomInt (1, 20));
 
-      for (let i = 0; i < 20; i ++) {
-        const randomInt = getRandomInt(1, 20);
-        if (randomInt % 3 === 0 && randomInt % 5 === 0) {
-          console.log('FizzBuzz');
-          continue;
-        } else if (randomInt % 3 === 0) {
-          console.log('Fizz');
-          continue;
-        } else if (randomInt % 5 === 0) {
-          console.log('Buzz');
-          continue;
-        } else {
-          console.log(randomInt);
+      // for (let i = 0; i < 20; i ++) {
+      //   const randomInt = getRandomInt(1, 20);
+      //   if (randomInt % 3 === 0 && randomInt % 5 === 0) {
+      //     console.log('FizzBuzz');
+      //     continue;
+      //   } else if (randomInt % 3 === 0) {
+      //     console.log('Fizz');
+      //     continue;
+      //   } else if (randomInt % 5 === 0) {
+      //     console.log('Buzz');
+      //     continue;
+      //   } else {
+      //     console.log(randomInt);
+      //   }
+      // }
+
+      // 11 W Practice Exercise //
+
+        let starWarsArray = ['Boba Fett', 'Darth Vader', 'Boba Fett', 'Boba Fett', 'Anakin Skywalker'];
+        let lotrArray = ['Gandalf', 'Frodo', 'Sam', 'Sam', 'Sam', 'Frodo', 'Gimli'
+        ];
+
+     function removeDuplicates (array) {
+        const uniqueArray = [];
+      for (const item of array) {
+        if (!uniqueArray.includes(item)) {
+          uniqueArray.push(item)
         }
+       }
+          return uniqueArray;
       }
+
+      const newArray = removeDuplicates(starWarsArray);
+      const newLotrArray = removeDuplicates(lotrArray);
+
+      console.log(lotrArray);
+      console.log(newLotrArray);
 
 
 
