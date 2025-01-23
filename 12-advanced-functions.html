@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title> 
+    
+  </head>
+  <body>
+    <script>
+      // function greeting() {
+
+      //   console.log('Hello There');
+
+      // }
+      // greeting();
+
+      // // functions are values (ex: numbers, strings, booleans orrrrr functions)
+
+      // const num = 2;
+      // const function1 = function() {
+      //   console.log('General Kenobi, you are a bold one.');
+      // };
+
+      // console.log(greeting);
+      // console.log(typeof(greeting));
+
+      // function1();
+
+      // const object1 = {
+      //   num: 2,
+      //   fun: function () {
+      //     console.log('Spring the trap')
+      //   }
+      // };
+      // object1.fun();
+
+      // function display(param){
+      //   console.log(param);
+      // }
+      // display(2);
+
+      // function run(param) {
+      //   param();
+      // };
+
+      // run(function(){
+      //   console.log('hello4')
+      // }); // passing a function into another function;
+
+
+      // setTimeout(function(){
+      //   console.log('You shall not pass');
+      // }, 3000); // built in function
+
+      // // Asynchronus Code ↑ The computer won't wait to finish this code, it will just set up the timer and go on. Synchronus code means that it will just go line by line.
+
+      // console.log('next line');
+
+
+      // // setinterval
+
+      // setInterval(function(){
+      //   console.log('Hello There')
+      // }, 3000); // built in function 1. pameter is a function we want to run in the future. 2. time in miliseconds. It will run the function every 3 seconds.
+
+      // console.log('Break')
+
+      // setInterval(function(){
+      //   console.log('General Kenobi, you are a bold one.')
+      // }, 3000);
+
+
+      // let bilboBaggins = console.log('Bilbo Baggins');
+
+      [
+        'Hello There',
+        'General Kenobi',
+        'You are a bold one'
+      ].forEach(function(value, index){
+        if (value === 'You are a bold one'){
+          return; // return ends one of the things. No break, so use a regular for loop.
+        }
+
+
+        console.log(value, index);
+      });
+
+
+
+    </script>
+    
+  </body>
+</html>
