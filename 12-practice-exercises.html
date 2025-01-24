@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <head>
   <title>12 Practice Exercises</title>
+  <style>
+    #startButton {
+      color: red;
+      background-color: black;
+    }
+
+    #startButton.party {
+      color: blue;
+      background-color: yellow;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
   <button id="startButton">Start</button>
@@ -23,7 +35,7 @@
 
     // runTwice(function() {console.log('Alligators are coming!')});
 
-    // ==================== 12 C Practice =================================
+    // ==================== 12 C,D,E Practice =================================
 
     const startButton = document.getElementById('startButton');
     const addToCartButton = document.getElementById('addToCart');
@@ -32,18 +44,25 @@
     startButton.addEventListener('click', () => {
       if(startButton.textContent === 'Start') {
         startButton.textContent = 'Getting ready to party...';
-        setTimeout(function(){startButton.textContent = "Let's party like it's 1699!"}, 2000);
+        setTimeout(function(){
+          startButton.textContent = "Let's party like it's 1699!";
+          startButton.classList.add('party');
+        }, 2000);
       } else {
         startButton.textContent = 'Cleaning up party...'
-        setTimeout(function(){startButton.textContent = 'Start'}, 2000);
+        setTimeout(function(){startButton.textContent = 'Start'
+        startButton.classList.remove('party');  
+        }, 2000);
       }
     });
 
     
 
     addToCartButton.addEventListener('click', () =>{
-      addedToCartPopUp.textContent = 'Added my dawgggggg!!! You ready to be happy ya!?';
-      setTimeout(function(){
+      let timeoutId;
+      addedToCartPopUp.textContent = 'Added my dawgggggg!!';
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(function(){
         addedToCartPopUp.textContent = '';
       },2000);
     }
