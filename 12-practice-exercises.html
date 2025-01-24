@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <title>12 Practice Exercises</title>
+</head>
+<body>
+  <button id="startButton">Start</button>
+  <p></p>
+  <button id="addToCart">Add to Cart</button>
+  <p id="addedToCart"></p>
+  <script>
+
+    // ======================12 a and 12 b ====================================================
+    // const add = function () {
+    //   console.log(2 + 3);
+    // };
+
+    // function runTwice(insertedFunction) {
+    //   insertedFunction();
+    //   insertedFunction();
+    // }
+
+    // runTwice(add);
+
+    // runTwice(function() {console.log('Alligators are coming!')});
+
+    // ==================== 12 C Practice =================================
+
+    const startButton = document.getElementById('startButton');
+    const addToCartButton = document.getElementById('addToCart');
+    const addedToCartPopUp = document.getElementById('addedToCart')
+
+    startButton.addEventListener('click', () => {
+      if(startButton.textContent === 'Start') {
+        startButton.textContent = 'Getting ready to party...';
+        setTimeout(function(){startButton.textContent = "Let's party like it's 1699!"}, 2000);
+      } else {
+        startButton.textContent = 'Cleaning up party...'
+        setTimeout(function(){startButton.textContent = 'Start'}, 2000);
+      }
+    });
+
+    
+
+    addToCartButton.addEventListener('click', () =>{
+      addedToCartPopUp.textContent = 'Added my dawgggggg!!! You ready to be happy ya!?';
+      setTimeout(function(){
+        addedToCartPopUp.textContent = '';
+      },2000);
+    }
+  
+    )
+
+ 
+
+
+    
+    
+  </script> 
+</body>
