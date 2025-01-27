@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bench Press to 225</title>
+  </head>
+  <body>
+    <button id="beginWorkout"
+    >Begin Bench Press Workout</button>
+    <div id="previousWorkouts"></div>
+    
+  </body>
+  <script>
+    const benchPressWorkoutData = [
+      {weight: 135, reps: 10},
+      {weight: 145, reps:8}
+    ]
+    const beginWorkout = document.getElementById('beginWorkout');
+    
+    
+
+    
+    beginWorkout.addEventListener('click', () => {
+      const workoutElement = document.createElement('button');
+      workoutElement.textContent = 'workout';
+      previousWorkouts.appendChild(workoutElement);
+      
+      benchPressWorkoutData.forEach(workout => {
+        
+        
+        
+        
+        console.log(workout);
+      }
+      )
+
+    });
+    //workoutElement.textContent = `Weight: ${workout.weight} lbs, Reps: ${workout.reps}`;
+  </script>
+</html>
+
+

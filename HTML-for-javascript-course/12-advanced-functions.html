@@ -5,7 +5,22 @@
     
   </head>
   <body>
+    <button id="clickButton">Click</button>
     <script>
+      const buttonElement = document.getElementById('clickButton');
+
+      const eventListener = () => {
+        console.log('click');
+      }
+      buttonElement.addEventListener('click', () => eventListener);
+
+      buttonElement.removeEventListener('click', eventListener);
+      
+      buttonElement.addEventListener('click', () => {
+        console.log('click2');
+      });
+
+
       // function greeting() {
 
       //   console.log('Hello There');
@@ -75,7 +90,7 @@
       //   'Hello There',
       //   'General Kenobi',
       //   'You are a bold one'
-      // ].forEach(function(value, index){
+      // ].forEach((value, index) => {
       //   if (value === 'You are a bold one'){
       //     return; // return ends one of the things. No break, so use a regular for loop.
       //   }
@@ -84,26 +99,39 @@
       //   console.log(value, index);
       // });
 
-      const regularFunction = function (param, param2) {
-        console.log('Luke I am your father');
-        return 5;
-      };
+      // const regularFunction = function (param, param2) {
+      //   console.log('Luke I am your father');
+      //   return 5;
+      // };
 
-      const arrowFunction = (param, param2) => {
-        console.log('Hello There');
-        return 5;
-      };
+      // const arrowFunction = (param, param2) => {
+      //   console.log('Hello There');
+      //   return 5;
+      // };
 
-      arrowFunction();
-      regularFunction();
+      // arrowFunction();
+      // regularFunction();
 
-      const oneParam = param => {
-        console.log(param + 1);
-      };
+      // const oneParam = param => {
+      //   console.log(param + 1);
+      // };
 
-      oneParam(2);
+      // oneParam(2);
 
-      const oneLine = () => 2+3; // one line arrow function. I personally don't love it.
+      // const oneLine = () => 2+3; // one line arrow function. I personally don't love it.
+
+      // console.log(oneLine());
+
+
+      // const object2 = {
+      //   method: () => {}, // This is not the preferred syntax
+      //   method() {
+
+      //   } // This is the preferred syntax.
+
+     // };
+
+
 
 
     </script>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bench Press Progression Tracker</title>
+<style>
+body {
+  font-family: sans-serif;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<h1>Bench Press Progression Tracker</h1>
+
+<table id="progressionTable">
+  <tr>
+    <th>Date</th>
+    <th>Weight (lbs)</th>
+    <th>Reps</th>
+    <th>Sets</th>
+    <th>Notes</th>
+  </tr>
+</table>
+
+<br>
+
+<button onclick="addEntry()">Add Entry</button>
+
+<script>
+function addEntry() {
+  var table = document.getElementById("progressionTable");
+  var row = table.insertRow();
+
+  var dateCell = row.insertCell(0);
+  var date = new Date();
+  dateCell.innerHTML = date.toLocaleDateString();
+
+  var weightCell = row.insertCell(1);
+  weightCell.innerHTML = "<input type='number' min='0' step='2.5'>";
+
+  var repsCell = row.insertCell(2);
+  repsCell.innerHTML = "<input type='number' min='0'>";
+
+  var setsCell = row.insertCell(3);
+  setsCell.innerHTML = "<input type='number' min='0'>";
+
+  var notesCell = row.insertCell(4);
+  notesCell.innerHTML = "<input type='text'>";
+}
+</script>
+
+</body>
+</html>
