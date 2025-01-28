@@ -6,7 +6,7 @@
   <body>
     <button id="beginWorkout"
     >Begin Bench Press Workout</button>
-    <div id="previousWorkouts"></div>
+    <div id="previousWorkoutsDivTrunk"></div>
     
   </body>
   <script>
@@ -14,18 +14,22 @@
       {weight: 135, reps: 10},
       {weight: 145, reps:8}
     ]
-    const beginWorkout = document.getElementById('beginWorkout');
+    const beginWorkoutButton = document.getElementById('beginWorkout');
+    const previousWorkoutsDivTrunk = document.getElementById('previousWorkoutsDivTrunk');
     
     
 
     
-    beginWorkout.addEventListener('click', () => {
-      const workoutElement = document.createElement('button');
-      workoutElement.textContent = 'workout';
-      previousWorkouts.appendChild(workoutElement);
+    beginWorkoutButton.addEventListener('click', () => {
       
-      benchPressWorkoutData.forEach(workout => {
-        
+        const workoutElementGraft = document.createElement('p');
+        workoutElementGraft.innerText = 'Your previous BenchPress results on date: 1/25/2025:';
+        previousWorkoutsDivTrunk.appendChild(workoutElementGraft);
+
+        benchPressWorkoutData.forEach(workout => {
+          const workoutElementGraft = document.createElement('p'); // Adding this to the Trunk of div already in HTML
+        workoutElementGraft.textContent = `Weight: ${workout.weight}, Reps: ${workout.reps}`;
+        previousWorkoutsDivTrunk.appendChild(workoutElementGraft);
         
         
         
