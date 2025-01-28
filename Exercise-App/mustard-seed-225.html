@@ -12,7 +12,9 @@
   <script>
     const benchPressWorkoutData = [
       {weight: 135, reps: 10},
-      {weight: 145, reps:8}
+      {weight: 145, reps:8},
+      {weight: 155, reps: 6},
+      {weight: 165, reps: 4}
     ]
     const beginWorkoutButton = document.getElementById('beginWorkout');
     const previousWorkoutsDivTrunk = document.getElementById('previousWorkoutsDivTrunk');
@@ -21,24 +23,24 @@
 
     
     beginWorkoutButton.addEventListener('click', () => {
-      
-        const workoutElementGraft = document.createElement('p');
-        workoutElementGraft.innerText = 'Your previous BenchPress results on date: 1/25/2025:';
-        previousWorkoutsDivTrunk.appendChild(workoutElementGraft);
+      displayLastWorkout(benchPressWorkoutData);
+    });
 
-        benchPressWorkoutData.forEach(workout => {
-          const workoutElementGraft = document.createElement('p'); // Adding this to the Trunk of div already in HTML
+    function displayLastWorkout (insertedWorkoutArry) {
+      const workoutElementGraft = document.createElement('p');
+      workoutElementGraft.innerText = 'Your previous BenchPress results on (insert date) were:';
+      previousWorkoutsDivTrunk.appendChild(workoutElementGraft);
+
+      insertedWorkoutArry.forEach(workout => {
+        const workoutElementGraft = document.createElement('p'); // Adding this to the Trunk of div already in HTML
         workoutElementGraft.textContent = `Weight: ${workout.weight}, Reps: ${workout.reps}`;
         previousWorkoutsDivTrunk.appendChild(workoutElementGraft);
-        
-        
-        
-        console.log(workout);
-      }
+        }
+
       )
 
-    });
-    //workoutElement.textContent = `Weight: ${workout.weight} lbs, Reps: ${workout.reps}`;
+    };
+    
   </script>
 </html>
 
