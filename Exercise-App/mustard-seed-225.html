@@ -6,42 +6,11 @@
   <body>
     <button id="beginWorkout"
     >Begin Bench Press Workout</button>
-    <div id="previousWorkoutsDivTrunk"></div>
+    <div id="workoutsDivTrunk"></div>
+    <div id="suggestedNewWorkout"></div>
     
   </body>
-  <script>
-    const benchPressWorkoutData = [
-      {weight: 135, reps: 10},
-      {weight: 145, reps:8},
-      {weight: 155, reps: 6},
-      {weight: 165, reps: 4}
-    ]
-    const beginWorkoutButton = document.getElementById('beginWorkout');
-    const previousWorkoutsDivTrunk = document.getElementById('previousWorkoutsDivTrunk');
-    
-    
-
-    
-    beginWorkoutButton.addEventListener('click', () => {
-      displayLastWorkout(benchPressWorkoutData);
-    });
-
-    function displayLastWorkout (insertedWorkoutArry) {
-      const workoutElementGraft = document.createElement('p');
-      workoutElementGraft.innerText = 'Your previous BenchPress results on (insert date) were:';
-      previousWorkoutsDivTrunk.appendChild(workoutElementGraft);
-
-      insertedWorkoutArry.forEach(workout => {
-        const workoutElementGraft = document.createElement('p'); // Adding this to the Trunk of div already in HTML
-        workoutElementGraft.textContent = `Weight: ${workout.weight}, Reps: ${workout.reps}`;
-        previousWorkoutsDivTrunk.appendChild(workoutElementGraft);
-        }
-
-      )
-
-    };
-    
-  </script>
+  <script src="mustard-seed-225.js"></script>
 </html>
 
 

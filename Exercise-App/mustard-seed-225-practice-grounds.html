@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bench Press to 225 Practice Grounds</title>
+  </head>
+  <body>
+ 
+  </body>
+  <script>
+
+
+    const benchPressWorkoutData = [
+      {weight: 135, reps: 10},
+      {weight: 145, reps: 8},
+      {weight: 155, reps: 6},
+      {weight: 165, reps: 4},
+    
+    ]
+    
+    
+   
+    calculateNewWorkout(benchPressWorkoutData);
+    
+    function calculateNewWorkout (previousWorkout) {
+      const newBenchPressArray = [];
+
+      if(previousWorkout[0].weight < previousWorkout[1].weight) {
+        let newSetRow = {};
+        
+        for (let setRow of previousWorkout) {
+          
+          if (setRow === previousWorkout[0]){
+              newSetRow = {
+              weight: setRow.weight + 10,
+              reps: setRow.reps
+            }
+            } else {
+              newSetRow = {
+              weight: setRow.weight,
+              reps: setRow.reps
+              
+              }
+              
+            }
+            
+            newBenchPressArray.push(newSetRow);
+          }
+        
+       
+      }
+
+      return(newBenchPressArray);
+    } 
+      
+      
+      
+      
+      
+      
+    
+   
+  </script>
+</html>
