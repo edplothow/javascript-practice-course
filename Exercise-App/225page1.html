@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bench Press Introduction Page</title>
+  </head>
+  <body>
+    <p>Estimate how much is your max bench?</p>
+    <input id = "inputMaxBench">
+    <button id = "enter-button">enter</button>
+    <p>
+
+    </p>
+    <button>I don't know</button>
+  </body>
+  <script>
+    const enterButton = document.getElementById('enter-button');
+    const inputMaxBench = document.getElementById('inputMaxBench');
+
+    enterButton.addEventListener('click', enterMaxBench);
+    inputMaxBench.addEventListener('keypress', () => {
+      if (event.key === 'Enter') {
+        enterMaxBench();
+      }
+    })
+         
+
+  
+    function enterMaxBench () {
+        window.location.href = "225page2.html"
+    }
+  </script>
+</html>

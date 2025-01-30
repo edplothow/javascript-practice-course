@@ -3,32 +3,35 @@ const benchPressWorkoutData = [
   {weight: 145, reps:8},
   {weight: 155, reps: 6},
   {weight: 165, reps: 4}
-]
+];
 const beginWorkoutButton = document.getElementById('beginWorkout');
 const workoutsDivTrunk = document.getElementById('workoutsDivTrunk');
 const suggestedNewWorkout = document.getElementById('suggestedNewWorkout');
-
+const newBenchPressArray = [];
 
 
 
 beginWorkoutButton.addEventListener('click', () => {
-  displayLastWorkout(benchPressWorkoutData);
+  if (benchPressWorkoutData){
+    displayOldWorkout(benchPressWorkoutData);
+    calculateNewWorkout(benchPressWorkoutData);
+    displayNewWorkout(newBenchPressArray);
+  
+  }
+  
 });
 
-function displayLastWorkout (insertedWorkoutArry) {
+
+function displayOldWorkout (insertedWorkoutArry) {
   const previousResultsGraft = document.createElement('p');
   previousResultsGraft.innerText = 'Your previous BenchPress results on (insert date) were:';
   workoutsDivTrunk.appendChild(previousResultsGraft);
-  // STOPPED HERE
-  const suggestedWorkoutGraft = document.createElement('p');
-  
-
-  calculateAndDisplayNewWorkout(benchPressWorkoutData);
 
 };
 
-function calculateAndDisplayNewWorkout (previousWorkout) {
-  const newBenchPressArray = [];
+
+function calculateNewWorkout (previousWorkout) {
+  
 // calculate the new suggested array:
   if(previousWorkout[0].weight < previousWorkout[1].weight) {
     let newSetRow = {};
@@ -48,9 +51,13 @@ function calculateAndDisplayNewWorkout (previousWorkout) {
         
       newBenchPressArray.push(newSetRow);
     }
+    console.log(newBenchPressArray);
+    return(newBenchPressArray);
        
   }
-  
+}
+
+function displayNewWorkout (previousWorkout) {
   
   // Display the suggested array on a webpage:
 
@@ -71,6 +78,8 @@ function calculateAndDisplayNewWorkout (previousWorkout) {
   
 
 } 
+
+
   
   
 
