@@ -1,63 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bench Press to 225 Practice Grounds</title>
+    <title>Practice</title>
   </head>
   <body>
- 
+    <p>Estimate how much is your max bench?</p>
+    <input id = "inputMaxBench">
+    <button id = "enter-button">enter</button>
+    <p>
+
+    </p>
+    <button id = "idkButton">I don't know</button>
   </body>
   <script>
-
-
-    const benchPressWorkoutData = [
-      {weight: 135, reps: 10},
-      {weight: 145, reps: 8},
-      {weight: 155, reps: 6},
-      {weight: 165, reps: 4},
+    const enterButton = document.getElementById('enter-button');
+    const inputMaxBench = document.getElementById('inputMaxBench');
+    const idkButton = document.getElementById('idkButton')
     
-    ]
     
     
    
-    calculateNewWorkout(benchPressWorkoutData);
-    
-    function calculateNewWorkout (previousWorkout) {
-      const newBenchPressArray = [];
 
-      if(previousWorkout[0].weight < previousWorkout[1].weight) {
-        let newSetRow = {};
-        
-        for (let setRow of previousWorkout) {
-          
-          if (setRow === previousWorkout[0]){
-              newSetRow = {
-              weight: setRow.weight + 10,
-              reps: setRow.reps
-            }
-            } else {
-              newSetRow = {
-              weight: setRow.weight,
-              reps: setRow.reps
-              
-              }
-              
-            }
-            
-            newBenchPressArray.push(newSetRow);
-          }
-        
-       
+    enterButton.addEventListener('click', runPracticeFunction);
+    inputMaxBench.addEventListener('keypress', () => {
+      if (event.key === 'Enter') {
+        runPracticeFunction ();
       }
+    })
+    // idkButton.addEventListener('click', idkButtonNewPage);
+         
+    function runPracticeFunction () {
+      
+    }
 
-      return(newBenchPressArray);
-    } 
-      
-      
-      
-      
-      
-      
-    
+  
    
   </script>
 </html>

@@ -5,5 +5,14 @@
   </head>
   <body>
     <p>Welcome</p>
+    <div id = "displayMaxBench"></div>
     
   </body>
+  <script>
+    const maxBench = Number(localStorage.getItem('maxBench'));
+    const displayMaxBench = document.getElementById('displayMaxBench');
+    displayMaxBench.innerText = `Your Max Bench is ${maxBench}`;
+    
+    console.log(maxBench);
+
+  </script>

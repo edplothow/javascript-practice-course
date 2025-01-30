@@ -10,11 +10,15 @@
     <p>
 
     </p>
-    <button>I don't know</button>
+    <button id = "idkButton">I don't know</button>
   </body>
   <script>
     const enterButton = document.getElementById('enter-button');
-    const inputMaxBench = document.getElementById('inputMaxBench');
+    const idkButton = document.getElementById('idkButton')
+    
+    
+    
+   
 
     enterButton.addEventListener('click', enterMaxBench);
     inputMaxBench.addEventListener('keypress', () => {
@@ -22,11 +26,25 @@
         enterMaxBench();
       }
     })
+    idkButton.addEventListener('click', idkButtonNewPage);
          
 
   
     function enterMaxBench () {
-        window.location.href = "225page2.html"
+      const maxBench = Number(document.getElementById('inputMaxBench').value);
+      console.log(maxBench);
+       if (maxBench && maxBench > 0) {
+        console.log('if is true', maxBench);
+        localStorage.setItem('maxBench', maxBench);
+        window.location.href = "225page2.html";
+       } else {
+        console.log('if is false');
+        alert('Only numbers are accepted');
+       }
+      
+    }
+    function idkButtonNewPage (){
+      window.location.href = "225page3-idk.html"
     }
   </script>
 </html>
