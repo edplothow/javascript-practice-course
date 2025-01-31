@@ -4,36 +4,11 @@
     <title>Practice</title>
   </head>
   <body>
-    <p>Estimate how much is your max bench?</p>
-    <input id = "inputMaxBench">
-    <button id = "enter-button">enter</button>
-    <p>
-
-    </p>
-    <button id = "idkButton">I don't know</button>
+    <div id = "divPracticeElement">Practice</div>
   </body>
   <script>
-    const enterButton = document.getElementById('enter-button');
-    const inputMaxBench = document.getElementById('inputMaxBench');
-    const idkButton = document.getElementById('idkButton')
+    const divPracticeElement = document.getElementById('divPracticeElement');
     
     
-    
-   
-
-    enterButton.addEventListener('click', runPracticeFunction);
-    inputMaxBench.addEventListener('keypress', () => {
-      if (event.key === 'Enter') {
-        runPracticeFunction ();
-      }
-    })
-    // idkButton.addEventListener('click', idkButtonNewPage);
-         
-    function runPracticeFunction () {
-      
-    }
-
-  
-   
   </script>
 </html>

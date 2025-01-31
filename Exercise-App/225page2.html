@@ -6,13 +6,89 @@
   <body>
     <p>Welcome</p>
     <div id = "displayMaxBench"></div>
+    <p></p>
+    <p>Choose Your Desired Workout:</p>
+    
+    <button id = "threeSetsOfTenButton">3 sets of 10 Workout</button>
+    <p></p>
+    <button id = "tenEightSixFourButton">10/8/6/4 Workout</button>
+    <p></p>
+    <div id ="displaySuggestedWorkoutTrunk"></div>
+    <p></p>
+    <div id="newWorkoutDiv"></div>
+    
     
   </body>
   <script>
     const maxBench = Number(localStorage.getItem('maxBench'));
+    const threeSetsOfTenButton = document.getElementById('threeSetsOfTenButton');
+    const tenEightSixFourButton = document.getElementById('tenEightSixFourButton');
+    const newWorkoutDiv = document.getElementById('newWorkoutDiv');
+    let suggestedWorkout = [];
     const displayMaxBench = document.getElementById('displayMaxBench');
-    displayMaxBench.innerText = `Your Max Bench is ${maxBench}`;
+    displayMaxBench.innerText = `Your Current Max Bench is ${maxBench}`;
+
+    threeSetsOfTenButton.addEventListener('click', () => {
+      displayThreeSetsOffTenButton(maxBench);
+    });
+    // displaySuggestedWorkoutThreeSetsOffTen(maxBench);
+    tenEightSixFourButton.addEventListener('click', () => {
+      displayTenEightSixFourButton(maxBench);
+    })
     
-    console.log(maxBench);
+    
+    function displayThreeSetsOffTenButton (maxBench) {
+      const displaySuggestedWorkoutTrunk = document.getElementById('displaySuggestedWorkoutTrunk');
+      displaySuggestedWorkoutTrunk.innerText = 'Suggested Workout Plan:'
+      const newWeight = ((Math.floor(Math.round((maxBench * 70)/100)/10)) * 10) + 5;
+      suggestedWorkout = [
+        {weight: newWeight, reps: 10},
+        {weight: newWeight, reps: 10},
+        {weight: newWeight, reps: 10}
+        
+      ];
+      forLoopDisplaySuggestedWorkout(suggestedWorkout);
+          
+    }
+
+    function displayTenEightSixFourButton (maxBench) {
+      const displaySuggestedWorkoutTrunk = document.getElementById('displaySuggestedWorkoutTrunk');
+      displaySuggestedWorkoutTrunk.innerText = 'Suggested Workout Plan:'
+      const newWeight = ((Math.floor(Math.round((maxBench * 70)/100)/10)) * 10) - 5;
+      suggestedWorkout = [
+        {weight: newWeight, reps: 10},
+        {weight: newWeight + 10, reps: 8},
+        {weight: newWeight + 20, reps: 6},
+        {weight: newWeight + 30, reps: 4}
+      ];
+
+      forLoopDisplaySuggestedWorkout(suggestedWorkout);
+    }
+
+    function forLoopDisplaySuggestedWorkout (suggestedWorkout) {
+      
+      for (const rowObject of suggestedWorkout) {
+        const newRowGraft = document.createElement('li');
+        newRowGraft.innerText = `Set One: Weight: ${rowObject.weight} Reps: ${rowObject.reps};`
+        displaySuggestedWorkoutTrunk.appendChild(newRowGraft);
+      }
+
+      newWorkoutDiv.innerText = 'How does this look? Ready to start workout?'
+      const acceptButton = document.createElement('button');
+      acceptButton.id = "acceptButtonID";
+      acceptButton.innerText = "Yes! Let's do this!";
+      newWorkoutDiv.appendChild(acceptButton);
+      acceptButtonID = document.getElementById('acceptButtonID');
+      acceptButtonID.addEventListener('click', () =>{
+        localStorage.setItem('suggestedWorkout', suggestedWorkout);  
+        console.log(suggestedWorkout);
+        window.location.href = "225page4-begin-bp-workout.html";
+      })
+      
+    }
+
+    
+    
+    
 
   </script>
